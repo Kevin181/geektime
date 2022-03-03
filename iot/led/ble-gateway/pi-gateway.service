@@ -1,0 +1,13 @@
+[Unit]
+Description=Pi Gateway
+Documentation=https://time.geekbang.org/column/intro/100063601
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/pi-gateway
+ExecStart=/home/pi/pi-gateway/service.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
